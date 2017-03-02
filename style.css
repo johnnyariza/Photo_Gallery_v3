@@ -1,0 +1,62 @@
+/* =================================
+Base Element Styles
+==================================== */
+body {
+    font-family: 'Josefin Slab', serif;
+    line-height: ;
+    color: black;
+    background-color: white;
+}
+
+/* =================================
+Header Styles
+==================================== */
+
+/* =================================
+Gallery Styles
+==================================== */
+
+/* =================================
+Footer Styles
+==================================== */
+
+/* =================================
+Layout Containers
+==================================== */
+.container {
+    padding-left: ;
+    padding-right: ;
+    margin: 0 auto;
+}
+
+/* =================================
+Media Queries
+==================================== */
+@media (min-width: 768px) {
+    .container {
+        padding-left: 1em;
+        padding-right: 1em;
+        max-width: 1150px;
+    }
+
+    /*---- Float clearfix ----*/
+    .clearfix::after {
+        content: " ";
+        display: table;
+        clear: both;
+    }
+}
+
+@media (min-width: 1024px) {
+    .container {
+        max-width: 1150px;
+        margin: 0 auto;
+    }
+    
+    /* ---- Float clearfix ----*/
+    .clearfix::after {
+        content: " ";
+        display: table;
+        clear: both;
+    }
+}
