@@ -8,24 +8,47 @@ body {
     background-color: white;
 }
 
+img {
+    max-width: 100%;
+}
+
 /* =================================
-Header Styles
+Search Bar Styles
 ==================================== */
 
 /* =================================
 Gallery Styles
 ==================================== */
 
+#gallery {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#gallery li {
+    width: 45%;
+    float: left;
+    margin: 2.5%;
+    text-align: center;
+    
+}
 /* =================================
 Footer Styles
 ==================================== */
+
+.footer {
+	display: block;
+    text-align: center;
+    clear: both;
+}
 
 /* =================================
 Layout Containers
 ==================================== */
 .container {
-    padding-left: ;
-    padding-right: ;
+    padding-left: 2.5%;
+    padding-right: 2.5%;
     margin: 0 auto;
 }
 
@@ -34,9 +57,9 @@ Media Queries
 ==================================== */
 @media (min-width: 768px) {
     .container {
-        padding-left: 1em;
-        padding-right: 1em;
-        max-width: 1150px;
+        padding-left: ;
+        padding-right: ;
+        max-width: ;
     }
 
     /*---- Float clearfix ----*/
@@ -49,7 +72,7 @@ Media Queries
 
 @media (min-width: 1024px) {
     .container {
-        max-width: 1150px;
+        max-width: ;
         margin: 0 auto;
     }
     
