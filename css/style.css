@@ -1,7 +1,6 @@
 /* =================================
 Base Element Styles
 ==================================== */
-
 * {
     box-sizing: border-box;
 }
@@ -20,13 +19,13 @@ img {
 /* =================================
 Search Bar Styles
 ==================================== */
-
 .header {
     margin: 25px auto;
     text-align: center;
 }
 
 .search {
+    max-width: 300px;
     display: inline-block;
     padding: 8px 15px;
     background-color: lightgray;
@@ -39,7 +38,6 @@ Search Bar Styles
 /* =================================
 Gallery Styles
 ==================================== */
-
 #photos {
     margin: 0;
     padding: 0;
@@ -47,9 +45,10 @@ Gallery Styles
 }
 
 #photos li {
-    width: 48%;
+    width: 47%;
     float: left;
-    margin: 1%;
+    margin: 0.5% 1.5%;
+    padding: 0;
     text-align: center;
     
 }
@@ -57,7 +56,6 @@ Gallery Styles
 /* =================================
 Footer Styles
 ==================================== */
-
 .footer {
 	display: block;
     margin: 40px auto;
@@ -71,45 +69,36 @@ Footer Styles
 Layout Containers
 ==================================== */
 .container {
-    padding-left: 2.5%;
-    padding-right: 2.5%;
+    padding-left: 1.5%;
+    padding-right: 1.5%;
     margin: 0 auto;
 }
 
 /* =================================
 Media Queries
 ==================================== */
+/*Mobile Landscape*/
 @media (min-width: 768px) {
-    .container {
-        padding-left: 2%;
-        padding-right: 2%;
-    }
-    
     #photos li {
-        width: 20%;
-        margin: 2%;
-        text-align: center;
-
-    }
-
-    /*---- Float clearfix ----*/
-    .clearfix::after {
-        content: " ";
-        display: table;
-        clear: both;
+        width: 33.3333%;
+        margin: 2.8% 0;
     }
 }
-
+/*Tablet Portrait*/
 @media (min-width: 1024px) {
     .container {
-        max-width: ;
-        margin: 0 auto;
+        max-width: 1000px;
     }
     
-    /* ---- Float clearfix ----*/
-    .clearfix::after {
-        content: " ";
-        display: table;
-        clear: both;
+    .search {
+	max-width: 440px;
+}
+    #photos li {
+        width: 23%;
+        margin: 1.5% 1%;
+        padding: 0;
+        
     }
 }
+/*Tablet Landscape*/
+/*Desktop*/
