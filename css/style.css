@@ -1,6 +1,11 @@
 /* =================================
 Base Element Styles
 ==================================== */
+
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family: 'Josefin Slab', serif;
     line-height: ;
@@ -16,31 +21,50 @@ img {
 Search Bar Styles
 ==================================== */
 
+.header {
+    margin: 25px auto;
+    text-align: center;
+}
+
+.search {
+    display: inline-block;
+    padding: 8px 15px;
+    background-color: lightgray;
+    border: solid 2px lightblue; 
+    border-radius: 3px;
+    margin: 0 auto;
+    width:98%
+}
+
 /* =================================
 Gallery Styles
 ==================================== */
 
-#gallery {
+#photos {
     margin: 0;
     padding: 0;
     list-style: none;
 }
 
-#gallery li {
-    width: 45%;
+#photos li {
+    width: 48%;
     float: left;
-    margin: 2.5%;
+    margin: 1%;
     text-align: center;
     
 }
+
 /* =================================
 Footer Styles
 ==================================== */
 
 .footer {
 	display: block;
+    margin: 40px auto;
     text-align: center;
+    padding: 8px 15px;
     clear: both;
+    width: 100%;
 }
 
 /* =================================
@@ -57,9 +81,15 @@ Media Queries
 ==================================== */
 @media (min-width: 768px) {
     .container {
-        padding-left: ;
-        padding-right: ;
-        max-width: ;
+        padding-left: 2%;
+        padding-right: 2%;
+    }
+    
+    #photos li {
+        width: 20%;
+        margin: 2%;
+        text-align: center;
+
     }
 
     /*---- Float clearfix ----*/
