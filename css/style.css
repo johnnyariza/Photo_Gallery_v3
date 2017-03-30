@@ -70,7 +70,7 @@ Footer Styles
 Layout Containers
 ==================================== */
 .container {
-    max-width: 454px;
+/*    max-width: 454px;*/
     margin: 0 auto;
     padding: 0 1%;
 }
@@ -79,13 +79,11 @@ Layout Containers
 Media Queries
 ==================================== */
 /*Mobile Landscape*/
-/*
 @media only screen 
-    and (min-device-width: 375px) 
-    and (max-device-width: 667px) 
-    and (-webkit-min-device-pixel-ratio: 2) {
+    and (min-width: 480px) {        
         #photos li {
-            width: 45.6%;
+            width: 28.3349%;
+            margin: 2.2% 2.5%;
         }
         .header {
             width: 50%;
@@ -93,21 +91,22 @@ Media Queries
             margin-right: 25%;
         }
 }
-*/
 
 /*Tablet Landscape*/
-/*
 @media only screen 
-    and (min-device-width: 768px) 
-    and (max-device-width: 1024px) 
-    and (-webkit-min-device-pixel-ratio: 1) {
-        .container {
-	        max-width: 1024px;
-}
+    and (min-width: 667px) {
         #photos li {
-            width: 23%;
-        } 
+            width: 20%;
+            margin: 2.2% 2.5%;
+        }
+        .header {
+            width: 30%;
+            margin-left: 35%;
+            margin-right: 35%;
+        }
+        .container {
+	    max-width: 1024px;
+        }
 }
-*/
 
 
