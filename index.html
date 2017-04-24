@@ -1,103 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>Photo Gallery | v3</title>
-    <link href="https://fonts.googleapis.com/css?family=Josefin+Slab" rel="stylesheet">
-    <!--
-            font-family: 'Josefin Slab', serif;
-            -->
-    <link href="css/normalize.css" rel="stylesheet">
-    <link href="js/lightbox/dist/css/lightbox.min.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
-</head>
-
-<body>
-    <header class="header">
-        <input class="search" data-list="#photos" id="search" name="search" placeholder="What you looking for?..." type="text">
-        </input>
-    </header>
-    <!--/.header-->
-    <main>
-        <div class="container clearfix">
-            <ul id="photos">
-                <li title="I love hay bales. Took this snap on a drive through the countryside past some straw fields.">
-                    <a href="photos/01.jpg" data-lightbox="gallery" data-title="I love hay bales. Took this snap on a drive through the countryside past some straw fields.">
-                        <img src="photos/thumbnails/01.jpg" alt="Hay Bales">
-                    </a>
-                </li>
-                <li title="The lake was so calm today. We had a great veiw of the snow on the mountains from here.">
-                    <a href="photos/02.jpg" data-lightbox="gallery" data-title="The lake was so calm today. We had a great veiw of the snow on the mountains from here.">
-                        <img src="photos/thumbnails/02.jpg" alt="Lake">
-                    </a>
-                </li>
-                <li title="I hiked to the top of the mountain and got this picture of the canyon and trees below.">
-                    <a href="photos/03.jpg" data-lightbox="gallery" data-title="I hiked to the top of the mountain and got this picture of the canyon and trees below.">
-                        <img src="photos/thumbnails/03.jpg" alt="Canyon">
-                    </a>
-                </li>
-                <li title="It was amazing to see an iceberg up close, it was so cold but didn't snow today.">
-                    <a href="photos/04.jpg" data-lightbox="gallery" data-title="It was amazing to see an iceberg up close, it was so cold but didn't snow today.">
-                        <img src="photos/thumbnails/04.jpg" alt="Iceberg">
-                    </a>
-                </li>
-                <li title="The red cliffs were beautiful. It was really hot in the desert but we did a lot of wlaking through the canyons.">
-                    <a href="photos/05.jpg" data-lightbox="gallery" data-title="The red cliffs were beautiful. It was really hot in the desert but we did a lot of wlaking through the canyons.">
-                        <img  src="photos/thumbnails/05.jpg" alt="Desert">
-                    </a>
-                </li>
-                <li title="Fall is coming, I love when the leaves on the trees start to change color.">
-                    <a href="photos/06.jpg" data-lightbox="gallery" data-title="Fall is coming, I love when the leaves on the trees start to change color.">
-                        <img src="photos/thumbnails/06.jpg" alt="Fall">
-                    </a>
-                </li>
-                <li title="I drove past this plantation yesterday, everything is so green!">
-                    <a href="photos/07.jpg" data-lightbox="gallery" data-title="I drove past this plantation yesterday, everything is so green!">
-                        <img src="photos/thumbnails/07.jpg" alt="Plantation">
-                    </a>
-                </li>
-                <li title="My summer vacation tot he Oregon coast. I love the sandy dunes!">
-                    <a href="photos/08.jpg" data-lightbox="gallery" data-title="My summer vacation tot he Oregon coast. I love the sandy dunes!">
-                        <img src="photos/thumbnails/08.jpg" alt="Dunes">
-                    </a>
-                </li>
-                <li title="We enjoyed a quiet stroll down this countryside lane.">
-                    <a href="photos/09.jpg" data-lightbox="gallery" data-title="We enjoyed a quiet stroll down this countryside lane.">
-                        <img src="photos/thumbnails/09.jpg" alt="Countryside Lane">
-                    </a>
-                </li>
-                <li title="Sunset at the coast! The sky turned a lovely shade of orange.">
-                    <a href="photos/10.jpg" data-lightbox="gallery" data-title="Sunset at the coast! The sky turned a lovely shade of orange.">
-                        <img src="photos/thumbnails/10.jpg" alt="Sunset">
-                    </a>
-                </li>
-                <li title="I did a tour of a cave today and the veiw of the landscape below was breathtaking.">
-                    <a href="photos/11.jpg" data-lightbox="gallery" data-title="I did a tour of a cave today and the veiw of the landscape below was breathtaking.">
-                        <img src="photos/thumbnails/11.jpg" alt="Cave">
-                    </a>
-                </li>
-                <li title="I walked through this meadow of bluebells and got a good view of the snow on the mountains before the fog came in.">
-                    <a href="photos/12.jpg" data-lightbox="gallery" data-title="I walked through this meadow of bluebells and got a good view of the snow on the mountains before the fog came in.">
-                        <img src="photos/thumbnails/12.jpg" alt="Bluebells">
-                    </a>
-                </li>
-            </ul>
-        </div>   
-    </main>
-
-    <footer class="footer">
-        <div>
-            <p>&copy; 2017 Johnny D.Ariza</p>
-        </div>
-    </footer>
-    <!--/ .footer-->
-    
-    <script src="js/jquery-3.1.1.min.js" type="text/javascript"></script>
-    <script src="js/lightbox/src/js/lightbox.js" type="text/javascript"></script>
-    <script src="js/HideSeek/jquery.hideseek.min.js" type="text/javascript"></script>
-    <script src="js/sticky/jquery.sticky.js" type="text/javascript"></script>
-    <script src="js/main.js" type="text/javascript"></script>    
-</body>
-
+    <head>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <title>Photo Gallery | v3</title>
+        <link href="https://fonts.googleapis.com/css?family=Josefin+Slab" rel="stylesheet"><!--font-family: 'Josefin Slab', serif;-->
+        <link href="css/normalize.css" rel="stylesheet">
+        <link href="js/lightbox/dist/css/lightbox.min.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <header class="header">
+            <input id="search" data-list="#photos" onkeyup="searching()" name="search" placeholder="What you looking for?..." type="text"> 
+        </header><!--/.header-->
+        <main>
+            <div class="container clearfix">
+                <ul id="photos">
+                    <li title="I love hay bales. Took this snap on a drive through the countryside past some straw fields.">
+                        <a data-lightbox="gallery" data-title="I love hay bales. Took this snap on a drive through the countryside past some straw fields." href="photos/01.jpg"><img alt="Hay Bales" src="photos/thumbnails/01.jpg"></a>
+                    </li>
+                    <li title="The lake was so calm today. We had a great veiw of the snow on the mountains from here.">
+                        <a data-lightbox="gallery" data-title="The lake was so calm today. We had a great veiw of the snow on the mountains from here." href="photos/02.jpg"><img alt="Lake" src="photos/thumbnails/02.jpg"></a>
+                    </li>
+                    <li title="I hiked to the top of the mountain and got this picture of the canyon and trees below.">
+                        <a data-lightbox="gallery" data-title="I hiked to the top of the mountain and got this picture of the canyon and trees below." href="photos/03.jpg"><img alt="Canyon" src="photos/thumbnails/03.jpg"></a>
+                    </li>
+                    <li title="It was amazing to see an iceberg up close, it was so cold but didn't snow today.">
+                        <a data-lightbox="gallery" data-title="It was amazing to see an iceberg up close, it was so cold but didn't snow today." href="photos/04.jpg"><img alt="Iceberg" src="photos/thumbnails/04.jpg"></a>
+                    </li>
+                    <li title="The red cliffs were beautiful. It was really hot in the desert but we did a lot of wlaking through the canyons.">
+                        <a data-lightbox="gallery" data-title="The red cliffs were beautiful. It was really hot in the desert but we did a lot of wlaking through the canyons." href="photos/05.jpg"><img alt="Desert" src="photos/thumbnails/05.jpg"></a>
+                    </li>
+                    <li title="Fall is coming, I love when the leaves on the trees start to change color.">
+                        <a data-lightbox="gallery" data-title="Fall is coming, I love when the leaves on the trees start to change color." href="photos/06.jpg"><img alt="Fall" src="photos/thumbnails/06.jpg"></a>
+                    </li>
+                    <li title="I drove past this plantation yesterday, everything is so green!">
+                        <a data-lightbox="gallery" data-title="I drove past this plantation yesterday, everything is so green!" href="photos/07.jpg"><img alt="Plantation" src="photos/thumbnails/07.jpg"></a>
+                    </li>
+                    <li title="My summer vacation tot he Oregon coast. I love the sandy dunes!">
+                        <a data-lightbox="gallery" data-title="My summer vacation tot he Oregon coast. I love the sandy dunes!" href="photos/08.jpg"><img alt="Dunes" src="photos/thumbnails/08.jpg"></a>
+                    </li>
+                    <li title="We enjoyed a quiet stroll down this countryside lane.">
+                        <a data-lightbox="gallery" data-title="We enjoyed a quiet stroll down this countryside lane." href="photos/09.jpg"><img alt="Countryside Lane" src="photos/thumbnails/09.jpg"></a>
+                    </li>
+                    <li title="Sunset at the coast! The sky turned a lovely shade of orange.">
+                        <a data-lightbox="gallery" data-title="Sunset at the coast! The sky turned a lovely shade of orange." href="photos/10.jpg"><img alt="Sunset" src="photos/thumbnails/10.jpg"></a>
+                    </li>
+                    <li title="I did a tour of a cave today and the veiw of the landscape below was breathtaking.">
+                        <a data-lightbox="gallery" data-title="I did a tour of a cave today and the veiw of the landscape below was breathtaking." href="photos/11.jpg"><img alt="Cave" src="photos/thumbnails/11.jpg"></a>
+                    </li>
+                    <li title="I walked through this meadow of bluebells and got a good view of the snow on the mountains before the fog came in.">
+                        <a data-lightbox="gallery" data-title="I walked through this meadow of bluebells and got a good view of the snow on the mountains before the fog came in." href="photos/12.jpg"><img alt="Bluebells" src="photos/thumbnails/12.jpg"></a>
+                    </li>
+                </ul>
+            </div>
+        </main>
+        <footer class="footer">
+            <div>
+                <p>&copy; 2017 Johnny D.Ariza</p>
+            </div>
+        </footer><!--/ .footer-->
+        <script src="js/jquery-3.1.1.min.js" type="text/javascript">
+        </script> 
+        <script src="js/lightbox/src/js/lightbox.js" type="text/javascript">
+        </script> 
+<!--
+        <script src="js/HideSeek/jquery.hideseek.min.js" type="text/javascript">
+        </script> 
+-->
+        <script src="js/sticky/jquery.sticky.js" type="text/javascript">
+        </script> 
+        <script src="js/main.js" type="text/javascript">
+        </script>
+    </body>
 </html>

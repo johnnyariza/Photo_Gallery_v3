@@ -1,17 +1,15 @@
 /* =================================
 Base Element Styles
 ==================================== */
+
 * {
     box-sizing: border-box;
 }
-
 body {
     font-family: 'Josefin Slab', serif;
-    line-height: ;
     color: black;
     background-color: white;
 }
-
 img {
     max-width: 100%;
 }
@@ -19,6 +17,7 @@ img {
 /* =================================
 Search Bar Styles
 ==================================== */
+
 .header {
     width: 90%;
     margin-top: 20px;
@@ -26,16 +25,14 @@ Search Bar Styles
     margin-right: 5%;
     margin-bottom: 20px;
 }
-
-.search {
+#search {
     padding: 8px 10px;
     background-color: whitesmoke;
-    border: solid 2px black; 
+    border: solid 2px black;
     border-radius: 3px;
     width: 100%;
     opacity: 0.9;
 }
-
 .is-sticky .header {
     opacity: 0.9;
 }
@@ -43,12 +40,12 @@ Search Bar Styles
 /* =================================
 Gallery Styles
 ==================================== */
+
 #photos {
-    margin:  0;
+    margin: 0;
     padding: 0;
     list-style: none;
 }
-
 #photos li {
     float: left;
     width: 45%;
@@ -58,8 +55,9 @@ Gallery Styles
 /* =================================
 Footer Styles
 ==================================== */
+
 .footer {
-	display: block;
+    display: block;
     margin: 20px auto;
     text-align: center;
     padding: 8px 15px;
@@ -69,8 +67,9 @@ Footer Styles
 /* =================================
 Layout Containers
 ==================================== */
+
 .container {
-/*    max-width: 454px;*/
+    /*    max-width: 454px;*/
     margin: 0 auto;
     padding: 0 1%;
 }
@@ -78,35 +77,35 @@ Layout Containers
 /* =================================
 Media Queries
 ==================================== */
+
+
 /*Mobile Landscape*/
-@media only screen 
-    and (min-width: 480px) {        
-        #photos li {
-            width: 28.3349%;
-            margin: 2.2% 2.5%;
-        }
-        .header {
-            width: 50%;
-            margin-left: 25%;
-            margin-right: 25%;
-        }
+
+@media only screen and (min-width: 480px) {
+    #photos li {
+        width: 28.3349%;
+        margin: 2.2% 2.5%;
+    }
+    .header {
+        width: 50%;
+        margin-left: 25%;
+        margin-right: 25%;
+    }
 }
 
 /*Tablet Landscape*/
-@media only screen 
-    and (min-width: 737px) {
-        #photos li {
-            width: 20%;
-            margin: 2.2% 2.5%;
-        }
-        .header {
-            width: 30%;
-            margin-left: 35%;
-            margin-right: 35%;
-        }
-        .container {
-	    max-width: 1024px;
-        }
+
+@media only screen and (min-width: 737px) {
+    #photos li {
+        width: 20%;
+        margin: 2.2% 2.5%;
+    }
+    .header {
+        width: 30%;
+        margin-left: 35%;
+        margin-right: 35%;
+    }
+    .container {
+        max-width: 1024px;
+    }
 }
-
-
